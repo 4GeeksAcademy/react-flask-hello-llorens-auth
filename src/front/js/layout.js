@@ -11,6 +11,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Completado } from "./pages/inicio_correcto.jsx";
+import { Formulario_Sesion } from "./component/form.jsx";
 
 //create your first component
 const Layout = () => {
@@ -31,6 +32,7 @@ const Layout = () => {
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<h1>Not found!</h1>} />
                         <Route element={<Completado />} path="/dashboard" />
+                        <Route element={<Formulario_Sesion />} path="/signup" />
                     </Routes>
                     <Footer />
                 </ScrollToTop>
