@@ -28,6 +28,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 			return false;
 		  }
 		},
+  
+		register: async (email, password) => {
+		  try {
+			const resp = await fetch(process.env.BACKEND_URL + "/register", {
+			  method: "POST",
+			  headers: {
+				"Content-Type": "application/json",
+			  },
+			  body: JSON.stringify({ email, password }),
+			});
+  
+			if (resp.ok) {
+			  console.log("Usuario registrado correctamente");
+			  return true;
+			} else {
+			  console.error("Error al registrar el usuario");
+			  return false;
+			}
+		  } catch (error) {
+			console.error("Error en la solicitud de registro", error);
+			return false;
+		  }
+		},
 	  },
 	};
   };

@@ -9,7 +9,7 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<Formulario_Sesion />
+			<h1>Bienvenido a esta página</h1>
 		</div>
 	);
 };
