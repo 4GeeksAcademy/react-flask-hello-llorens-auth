@@ -15,7 +15,7 @@ export const Formulario_Sesion = () => {
     const success = await actions.login(email, password);
 
     if (success) {
-      navigate("/dashboard"); // Cambia la ruta según tus necesidades
+      navigate("/dashboard");
     } else {
       alert("Inicio de sesión fallido. Verifica tus credenciales.");
     }
